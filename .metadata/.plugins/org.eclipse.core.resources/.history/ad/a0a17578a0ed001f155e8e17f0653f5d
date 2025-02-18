@@ -1,0 +1,6 @@
+package org.big.dto;
+
+public class BoardDto {
+	private int boardIdx;
+	private String title;
+}

@@ -1,0 +1,18 @@
+package org.big;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class BoardApplicationTests {
+	
+	
+	private SqlSessionTemplate sqlSession;
+
+	@Test
+	void contextLoads() {
+	}
+
+}

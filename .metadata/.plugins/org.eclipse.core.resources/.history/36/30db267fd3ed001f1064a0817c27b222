@@ -1,0 +1,15 @@
+package org.big.controller;
+
+import org.big.service.BoardService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.ModelAndView;
+
+public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
+	public ModelAndView openBoardList() throws Exception {
+		ModelAndView mv = new ModelAndView();
+	}
+}

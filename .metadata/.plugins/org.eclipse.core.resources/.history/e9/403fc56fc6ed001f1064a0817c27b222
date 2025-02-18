@@ -1,0 +1,22 @@
+package org.big;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class BoardApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+	
+	@Test
+	public void jUnitTest() {
+		int a = 1;
+		int b = 2;
+		int sum;
+		
+		Assertions.assertEquals(a + b, sum);
+	}
+}

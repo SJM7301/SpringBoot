@@ -1,0 +1,16 @@
+package org.big;
+
+import org.junit.jupiter.api.Test;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class BoardApplicationTests {
+
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	@Test
+	void contextLoads() {
+	}
+
+}

@@ -1,0 +1,11 @@
+package org.big.controller;
+
+import org.big.service.BoardService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
+}

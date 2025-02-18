@@ -1,0 +1,19 @@
+package org.big.dto;
+
+import java.time.LocalDateTime;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+public class BoardDto {
+	private int boardIdx;
+	private String title;
+	private String content;
+	private int hit_cnt;
+	private LocalDateTime created_datetime;
+	private String creator_id;
+	private LocalDateTime updated_datetime;
+	private String updator_id;
+}

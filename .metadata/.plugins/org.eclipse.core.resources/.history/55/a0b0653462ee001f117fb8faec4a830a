@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>board</title>
+<link rel="stylesheet" th:href="@{/css/style.css" />
+</head>
+<body>
+11111111111111111111111111111
+</body>
+</html>

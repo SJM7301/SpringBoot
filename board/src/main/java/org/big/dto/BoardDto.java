@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class BoardDto {
-	private int boardIdx;
+	private int board_idx;
 	private String title;
 	private String content;
 	private int hit_cnt;
@@ -15,12 +15,12 @@ public class BoardDto {
 	private LocalDateTime updated_datetime;
 	private String updator_id;
 
-	public int getBoardIdx() {
-		return boardIdx;
+	public int getBoard_idx() {
+		return board_idx;
 	}
 
-	public void setBoardIdx(int boardIdx) {
-		this.boardIdx = boardIdx;
+	public void setBoard_idx(int board_idx) {
+		this.board_idx = board_idx;
 	}
 
 	public String getTitle() {

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>board</title>
+<link rel="stylesheet" th:href="@{/css/style.css" />
+</head>
+<body>
+	<div>
+		<h2></h2>
+		<table>
+			
+		</table>
+	</div>
+</body>
+</html>

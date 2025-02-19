@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>board</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+	<div>
+		<h2>게시판 상세 화면</h2>
+		<table class="board_detail">
+			<colgroup>
+				<col width="15%" />
+				<col width="*" />
+				<col width="15%" />
+				<col width="20%" />
+			</colgroup>
+			<caption>게시글 상세 내용</caption>
+			
+			<tbody>
+				<tr>
+					<th scope="row">글 번호</th>
+					<td th:></td>
+					<th scope="row">조회수</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">작성자</th>
+					<td></td>
+					<th scope="row">작성일</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">제목</th>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

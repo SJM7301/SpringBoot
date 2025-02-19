@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>board</title>
+	<link rel="stylesheet" th:href="@{/css/style.css"></link>
+</head>
+<body>
+	<div class="container">
+		<h2>게시판 목록</h2>
+		<table class="board_list">
+			<colgroup>
+				<col width="" />
+				<col width="" />
+				<col width="" />
+				<col width="" />
+			</colgroup>
+			
+			<thead>
+				<tr>
+					<th scope="col"></th>
+					<th scope="col"></th>
+					<th scope="col"></th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</body>
+</html>

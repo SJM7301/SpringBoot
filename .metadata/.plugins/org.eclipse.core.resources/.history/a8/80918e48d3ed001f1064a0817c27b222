@@ -1,7 +1,0 @@
-package org.big.controller;
-
-import org.big.service.BoardService;
-
-public class BoardController {
-	private BoardService boardService;
-}

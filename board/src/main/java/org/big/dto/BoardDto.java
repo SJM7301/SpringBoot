@@ -6,77 +6,61 @@ import lombok.Data;
 
 @Data
 public class BoardDto {
-	private int board_idx;
+	private int boardIdx;
 	private String title;
 	private String content;
-	private int hit_cnt;
-	private LocalDateTime created_datetime;
-	private String creator_id;
-	private LocalDateTime updated_datetime;
-	private String updator_id;
-
-	public int getBoard_idx() {
-		return board_idx;
+	private int hitCnt;
+	private LocalDateTime createdDatetime;
+	private String creatorId;
+	private LocalDateTime updatedDatetime;
+	private String updatorId;
+	
+	public int getBoardIdx() {
+		return boardIdx;
 	}
-
-	public void setBoard_idx(int board_idx) {
-		this.board_idx = board_idx;
+	public void setBoardIdx(int boardIdx) {
+		this.boardIdx = boardIdx;
 	}
-
 	public String getTitle() {
 		return title;
 	}
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 	public String getContent() {
 		return content;
 	}
-
 	public void setContent(String content) {
 		this.content = content;
 	}
-
-	public int getHit_cnt() {
-		return hit_cnt;
+	public int getHitCnt() {
+		return hitCnt;
 	}
-
-	public void setHit_cnt(int hit_cnt) {
-		this.hit_cnt = hit_cnt;
+	public void setHitCnt(int hitCnt) {
+		this.hitCnt = hitCnt;
 	}
-
-	public LocalDateTime getCreated_datetime() {
-		return created_datetime;
+	public LocalDateTime getCreatedDatetime() {
+		return createdDatetime;
 	}
-
-	public void setCreated_datetime(LocalDateTime created_datetime) {
-		this.created_datetime = created_datetime;
+	public void setCreatedDatetime(LocalDateTime createdDatetime) {
+		this.createdDatetime = createdDatetime;
 	}
-
-	public String getCreator_id() {
-		return creator_id;
+	public String getCreatorId() {
+		return creatorId;
 	}
-
-	public void setCreator_id(String creator_id) {
-		this.creator_id = creator_id;
+	public void setCreatorId(String creatorId) {
+		this.creatorId = creatorId;
 	}
-
-	public LocalDateTime getUpdated_datetime() {
-		return updated_datetime;
+	public LocalDateTime getUpdatedDatetime() {
+		return updatedDatetime;
 	}
-
-	public void setUpdated_datetime(LocalDateTime updated_datetime) {
-		this.updated_datetime = updated_datetime;
+	public void setUpdatedDatetime(LocalDateTime updatedDatetime) {
+		this.updatedDatetime = updatedDatetime;
 	}
-
-	public String getUpdator_id() {
-		return updator_id;
+	public String getUpdatorId() {
+		return updatorId;
 	}
-
-	public void setUpdator_id(String updator_id) {
-		this.updator_id = updator_id;
+	public void setUpdatorId(String updatorId) {
+		this.updatorId = updatorId;
 	}
-
 }

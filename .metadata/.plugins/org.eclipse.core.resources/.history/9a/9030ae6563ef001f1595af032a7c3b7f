@@ -1,0 +1,5 @@
+package org.big.configuration;
+
+public class WebMvcConfiguration {
+
+}

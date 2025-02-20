@@ -4,8 +4,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="org.big.mapper.BoardMapper">
-  	<select id="selectBoardList" resultType="org.big.dto.BoardDto">
+<mapper namespace="org.big.mapper.BoardMapper">
+	<select id="selectBoardList" resultType="org.big.dto.BoardDto">
   		<![CDATA[
   			SELECT
   				board_idx,
@@ -21,7 +21,7 @@
   	</select>
   	
   	<insert id="insertBoard" parameterType="org.big.dto.BoardDto" useGeneratedKeys="true">
-  		<selectKey keyProperty="board_idx" resultType="int" order="AFTER">
+  		<selectKey keyProperty="boardIdx" resultType="int" order="AFTER">
   			SELECT tboard_seq.currval FROM dual
   		</selectKey>
   		
@@ -52,7 +52,7 @@
   			SET
   				hit_cnt = hit_cnt + 1
   			WHERE
-  				board_idx = #{board_idx}
+  				board_idx = #{boardIdx}
   		]]>
   	</update>
   	
@@ -68,30 +68,31 @@
            FROM
               t_board
            WHERE 
-              board_idx = #{board_idx} AND deleted_yn='N'      
+              board_idx = #{boardIdx} AND deleted_yn='N'      
         ]]>
   	</select>
   	
   	<update id="updateBoard" parameterType="org.big.dto.BoardDto">
   		<![CDATA[
-  			UPDATE t_board SET
+  			UPDATE
+  				t_board
+  			SET
   				title=#{title},
   				content=#{content},
-  				created_datetime=sysdate,
-              	creator_id='admin'
+  				updated_datetime=sysdate,
+              	updator_id='admin'
             WHERE
-            	board_idx=#{board_idx}
+            	board_idx=#{boardIdx}
   		]]>
   	</update>
   	
-  	<update id="deleteBoard" parameterType="int">
+  	<delete id="deleteBoard" parameterType="int">
   		<![CDATA[
-  			UPDATE t_board SET
-  				deleted_yn = 'Y',
-  				updated_datetime=sysdate,
-              	updater_id='admin'
+  			DELETE
+  			FROM
+  				t_board
            	WHERE
-           		board_idx=#{board_idx}
+           		board_idx=#{boardIdx}
   		]]>
-  	</update>
-  </mapper>
+	</delete>
+</mapper>

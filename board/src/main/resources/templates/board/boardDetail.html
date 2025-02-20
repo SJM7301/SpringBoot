@@ -19,15 +19,15 @@
 			<tbody>
 				<tr>
 					<th scope="row">글 번호</th>
-					<td th:text="${board.board_idx}"></td>
+					<td th:text="${board.boardIdx}"></td>
 					<th scope="row">조회수</th>
-					<td text="${board.hit_cnt}"></td>
+					<td th:text="${board.hitCnt}"></td>
 				</tr>
 				<tr>
 					<th scope="row">작성자</th>
-					<td th:text="${board.creator_id}"></td>
+					<td th:text="${board.creatorId}"></td>
 					<th scope="row">작성일</th>
-					<td th:text="${#temporals.format(board.created_datetime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+					<td th:text="${#temporals.format(board.createdDatetime, 'yyyy-MM-dd HH:mm:ss')}"></td>
 				</tr>
 				<tr>
 					<th scope="row">제목</th>
@@ -42,7 +42,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<input type="hidden" name="board_idx" th:value="${board.board_idx}">
+		<input type="hidden" name="boardIdx" th:value="${board.boardIdx}">
 	</form>
 	
 	<input type="button" id="list" value="목록으로">

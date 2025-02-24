@@ -16,6 +16,13 @@
 	<logger name="board" level="DEBUG" appender-ref="console" />
 	<logger name="jdbc.sqlonly" level="INFO" appender-ref="console-infolog" />
 	<logger name="jdbc.resultsettable" level="INFO" appender-ref="console-infolog" />
+	<logger name="org.big.aop.LoggerAspect" level="DEBUG" />
+	<logger name="org.big.aop.TransactionAspect" level="DEBUG" />
+	<logger name="org.big.interceptor.LoggerInterceptor" level="DEBUG" />
+	<logger name="org.big.controller.BoardController" level="DEBUG" />
+	<logger name="org.big.service.BoardServiceImpl" level="DEBUG" />
+	<logger name="org.big.mapper.BoardMapper" level="DEBUG" />
+	<logger name="org.springframework.jdbc" level="error" />
 	
 	<!-- 루트 로거 -->
 	<root level="off">

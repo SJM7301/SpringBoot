@@ -1,6 +1,7 @@
 package org.big.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import lombok.Data;
 
@@ -14,53 +15,5 @@ public class BoardDto {
 	private String creatorId;
 	private LocalDateTime updatedDatetime;
 	private String updatorId;
-	
-	public int getBoardIdx() {
-		return boardIdx;
-	}
-	public void setBoardIdx(int boardIdx) {
-		this.boardIdx = boardIdx;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public int getHitCnt() {
-		return hitCnt;
-	}
-	public void setHitCnt(int hitCnt) {
-		this.hitCnt = hitCnt;
-	}
-	public LocalDateTime getCreatedDatetime() {
-		return createdDatetime;
-	}
-	public void setCreatedDatetime(LocalDateTime createdDatetime) {
-		this.createdDatetime = createdDatetime;
-	}
-	public String getCreatorId() {
-		return creatorId;
-	}
-	public void setCreatorId(String creatorId) {
-		this.creatorId = creatorId;
-	}
-	public LocalDateTime getUpdatedDatetime() {
-		return updatedDatetime;
-	}
-	public void setUpdatedDatetime(LocalDateTime updatedDatetime) {
-		this.updatedDatetime = updatedDatetime;
-	}
-	public String getUpdatorId() {
-		return updatorId;
-	}
-	public void setUpdatorId(String updatorId) {
-		this.updatorId = updatorId;
-	}
+	private List<BoardFileDto> fileList;
 }

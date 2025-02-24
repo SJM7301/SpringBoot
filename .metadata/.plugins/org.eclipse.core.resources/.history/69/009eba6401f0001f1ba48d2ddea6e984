@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>공통 에러 페이지</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <p>공통 에러 페이지</p>
+    <p th:text="${exception != null ? exception : '예기치 않은 에러가 발생했습니다.'}"></p>
+    <ul th:each="list : ${exception != null ? exception.getStackTrace() : new java.lang.StackTraceElement[0]}" 
+        th:text="${list.toString()}"></ul>
+</body>
+</html>

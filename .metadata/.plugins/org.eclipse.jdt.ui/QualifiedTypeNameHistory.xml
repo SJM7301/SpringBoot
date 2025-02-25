@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.transaction.PlatformTransactionManager"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.interceptor.MatchAlwaysTransactionAttributeSource"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.interceptor.RuleBasedTransactionAttribute"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.interceptor.RollbackRuleAttribute"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.interceptor.TransactionInterceptor"/>
     <fullyQualifiedTypeName name="org.springframework.aop.Advisor"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
     <fullyQualifiedTypeName name="org.springframework.aop.aspectj.AspectJExpressionPointcut"/>
@@ -47,7 +42,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.big.dto.BoardFileDto"/>
     <fullyQualifiedTypeName name="org.springframework.util.ObjectUtils"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartHttpServletRequest"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.context.properties.ConfigurationProperties"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.security.web.firewall.HttpFirewall"/>
+    <fullyQualifiedTypeName name="org.springframework.security.web.firewall.DefaultHttpFirewall"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 </qualifiedTypeNameHistroy>

@@ -26,21 +26,21 @@ public class RestBoardController {
 	@Autowired
 	private BoardService boardService;
 
-	@RequestMapping(value="/board", method = RequestMethod.GET)
+	@RequestMapping(value = "/board", method = RequestMethod.GET)
 	public ModelAndView openBoardList() throws Exception {
-		ModelAndView mv = new ModelAndView("/board/restBoardList");
+		ModelAndView mv = new ModelAndView("thymeleaf/board/restBoardList");
 
 		List<BoardDto> list = boardService.selectBoardList();
 		mv.addObject("list", list);
 		return mv;
 	}
 
-	@RequestMapping(value="/board/write", method = RequestMethod.GET)
+	@RequestMapping(value = "/board/write", method = RequestMethod.GET)
 	public String openBoardWrite() throws Exception {
-		return "/board/restBoardWrite";
+		return "thymeleaf/board/restBoardWrite";
 	}
 
-	@RequestMapping(value="/board/write", method = RequestMethod.POST)
+	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
 	public String insertBoard(BoardDto board, MultipartHttpServletRequest multipartHttpServletRequest)
 			throws Exception {
 		boardService.insertBoard(board, multipartHttpServletRequest);
@@ -48,9 +48,9 @@ public class RestBoardController {
 		return "redirect:/board";
 	}
 
-	@RequestMapping(value="/board/{boardIdx}", method = RequestMethod.GET)
+	@RequestMapping(value = "/board/{boardIdx}", method = RequestMethod.GET)
 	public ModelAndView openBoardDetail(@PathVariable("boardIdx") int boardIdx) throws Exception {
-		ModelAndView mv = new ModelAndView("/board/restBoardDetail");
+		ModelAndView mv = new ModelAndView("thymeleaf/board/restBoardDetail");
 
 		boardService.updateHitCount(boardIdx);
 		BoardDto board = boardService.selectBoardDetail(boardIdx);
@@ -59,19 +59,19 @@ public class RestBoardController {
 		return mv;
 	}
 
-	@RequestMapping(value="/board/{boardIdx}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/board/{boardIdx}", method = RequestMethod.PUT)
 	public String updateBoard(BoardDto board) throws Exception {
 		boardService.updateBoard(board);
 		return "redirect:/board";
 	}
 
-	@RequestMapping(value="/board/{boardIdx}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/board/{boardIdx}", method = RequestMethod.DELETE)
 	public String deleteBoard(@PathVariable("boardIdx") int boardIdx) throws Exception {
 		boardService.deleteBoard(boardIdx);
 		return "redirect:/board";
 	}
 
-	@RequestMapping(value="/board/file", method = RequestMethod.GET)
+	@RequestMapping(value = "/board/file", method = RequestMethod.GET)
 	public void downloadBoardFile(@RequestParam("idx") int idx, @RequestParam("boardIdx") int boardIdx,
 			HttpServletResponse response) throws Exception {
 		BoardFileDto boardFile = boardService.selectBoardFileInformation(idx, boardIdx);

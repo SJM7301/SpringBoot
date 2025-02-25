@@ -28,7 +28,7 @@ public class BoardController {
 
 	@RequestMapping("/board/openBoardList.do")
 	public ModelAndView openBoardList() throws Exception {
-		ModelAndView mv = new ModelAndView("/board/boardList");
+		ModelAndView mv = new ModelAndView("thymeleaf/board/boardList");
 
 		List<BoardDto> list = boardService.selectBoardList();
 		mv.addObject("list", list);
@@ -37,7 +37,7 @@ public class BoardController {
 
 	@RequestMapping("/board/openBoardWrite.do")
 	public String openBoardWrite() throws Exception {
-		return "/board/boardWrite";
+		return "thymeleaf/board/boardWrite";
 	}
 
 	@RequestMapping("/board/insertBoard.do")
@@ -50,7 +50,7 @@ public class BoardController {
 
 	@RequestMapping("/board/openBoardDetail.do")
 	public ModelAndView openBoardDetail(@RequestParam("boardIdx") int boardIdx) throws Exception {
-		ModelAndView mv = new ModelAndView("/board/boardDetail");
+		ModelAndView mv = new ModelAndView("thymeleaf/board/boardDetail");
 
 		boardService.updateHitCount(boardIdx);
 		BoardDto board = boardService.selectBoardDetail(boardIdx);
@@ -81,9 +81,10 @@ public class BoardController {
 
 			response.setContentType("application/octet-stream");
 			response.setContentLength(files.length);
-			response.setHeader("Content-Disposition", "attachment; fileName=\"" + URLEncoder.encode(fileName, "UTF-8") + "\";");
+			response.setHeader("Content-Disposition",
+					"attachment; fileName=\"" + URLEncoder.encode(fileName, "UTF-8") + "\";");
 			response.setHeader("Content-Transfer-Encoding", "binary");
-			
+
 			response.getOutputStream().write(files);
 			response.getOutputStream().flush();
 			response.getOutputStream().close();

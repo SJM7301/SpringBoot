@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container py-4">
-		<%@ include file="menu.jsp" %> <!-- 메뉴 바를 포함하는 부분 -->
+		<jsp:include page="/bookmarket/menu.do" /> <!-- 메뉴 바를 포함하는 부분 -->
 		
 		<!-- 페이지 상단의 헤더 -->
 		<div class="p-5 mb-4 bg-body-tertiary rounded-3">
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 
-		<%@ include file="footer.jsp" %> <!-- 페이지 하단의 푸터 포함 -->
+		<jsp:include page="/bookmarket/footer.do" /> <!-- 페이지 하단의 푸터 포함 -->
 	</div>
 </body>
 </html>

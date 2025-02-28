@@ -5,7 +5,6 @@
 <title>회원 정보</title>
 </head>
 <body>
-
 	<div class="container py-4">
 		<jsp:include page="/bookmarket/menu.do" />
 
@@ -29,7 +28,6 @@
          		%>
 			</div>
 		</div>
-		
 		
 		<div class="row align-items-md-stretch   text-center">
 			<%

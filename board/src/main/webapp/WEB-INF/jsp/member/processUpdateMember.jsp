@@ -29,7 +29,7 @@
 	driver="com.mysql.jdbc.Driver" user="root" password="1111" />
 
 <sql:update dataSource="${dataSource}" var="resultSet">
-   UPDATE MEMBER SET password=?, name=?, gender=?, birth=?, mail=?, phone=?, address=? WHERE id=?
+	UPDATE MEMBER SET password=?, name=?, gender=?, birth=?, mail=?, phone=?, address=? WHERE id=?
 	<sql:param value="<%=password%>" />
 	<sql:param value="<%=name%>" />
 	<sql:param value="<%=gender%>" />
@@ -43,4 +43,3 @@
 <c:if test="${resultSet>=1}">
 	<c:redirect url="/bookmarket/member/resultMember.do?msg=0" />
 </c:if>
-

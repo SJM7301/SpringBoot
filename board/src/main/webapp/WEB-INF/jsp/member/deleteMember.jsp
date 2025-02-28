@@ -17,4 +17,3 @@
 	<c:import var="url" url="/bookmarket/member/logoutMember.do" />
 	<c:redirect url="/bookmarket/member/resultMember.do" />
 </c:if>
-

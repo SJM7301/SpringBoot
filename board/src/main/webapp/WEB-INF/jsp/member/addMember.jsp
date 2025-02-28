@@ -26,7 +26,7 @@
 <body>
 	<div class="container py-4">
 		<jsp:include page="/bookmarket/menu.do" />
-
+		
 		<div class="p-5 mb-4 bg-body-tertiary rounded-3">
 			<div class="container-fluid py-5">
 				<h1 class="display-5 fw-bold">회원 가입</h1>

@@ -44,7 +44,6 @@ public class RestBoardController {
 	public String insertBoard(BoardDto board, MultipartHttpServletRequest multipartHttpServletRequest)
 			throws Exception {
 		boardService.insertBoard(board, multipartHttpServletRequest);
-
 		return "redirect:/board";
 	}
 
@@ -55,7 +54,6 @@ public class RestBoardController {
 		boardService.updateHitCount(boardIdx);
 		BoardDto board = boardService.selectBoardDetail(boardIdx);
 		mv.addObject("board", board);
-
 		return mv;
 	}
 

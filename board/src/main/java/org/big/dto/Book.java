@@ -5,7 +5,6 @@ import java.io.*;
 public class Book implements Serializable {
 
 	public static final long serialVersionUID = -4274700572038677000L;
-
 	private String bookId; // 도서 ID
 	private String name; // 도서명
 	private int unitPrice; // 가격
@@ -17,13 +16,14 @@ public class Book implements Serializable {
 	private String releaseDate; // 출판일(월/년)
 	private String condition; // 신제품 or 구제품 or 리퍼브제품
 	private String filename; // 이미지 파일명
-	private int quantity; //장바구니에 담은 개수
+	private int quantity; // 장바구니에 담은 개수
 
 	public Book() {
 		super();
 	}
 
-	public Book(String bookId, String name, Integer unitPrice) {
+	public Book(String bookId, String name, int unitPrice) {
+		super();
 		this.bookId = bookId;
 		this.name = name;
 		this.unitPrice = unitPrice;

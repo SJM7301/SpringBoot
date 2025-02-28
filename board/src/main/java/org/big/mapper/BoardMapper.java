@@ -9,6 +9,7 @@ import org.big.dto.BoardFileDto;
 
 @Mapper
 public interface BoardMapper {
+	
 	List<BoardDto> selectBoardList() throws Exception;
 	void insertBoard(BoardDto board) throws Exception;
 	void updateHitCount(int boardIdx) throws Exception;

@@ -59,7 +59,7 @@
 </html>
 
 <%
-	session.invalidate();
+	session.removeAttribute("cartlist");
 	
 	for(int i = 0; i < cookies.length; i++){
 		Cookie thisCookie = cookies[i];

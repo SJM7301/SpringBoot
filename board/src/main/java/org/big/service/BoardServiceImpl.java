@@ -1,6 +1,5 @@
 package org.big.service;
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.big.common.FileUtils;
@@ -11,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.ObjectUtils;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
@@ -52,7 +49,6 @@ public class BoardServiceImpl implements BoardService {
 		BoardDto board = boardMapper.selectBoardDetail(boardIdx);
 		List<BoardFileDto> fileList = boardMapper.selectBoardFileList(boardIdx);
 		board.setFileList(fileList);
-
 		return board;
 	}
 

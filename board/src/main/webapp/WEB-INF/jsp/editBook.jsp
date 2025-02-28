@@ -14,7 +14,7 @@
 	function deleteConfirm(id) {
 		// 삭제 확인 후 삭제를 진행하거나 취소
 		if(confirm("해당 도서를 삭제합니다!!") == true)
-			location.href="./deleteBook.jsp?id=" + id; // 삭제 페이지로 리다이렉트
+			location.href="/bookmarket/deleteBook.do?id=" + id; // 삭제 페이지로 리다이렉트
 		else
 			return; // 취소하면 아무 일도 일어나지 않음
 	}
@@ -56,11 +56,11 @@
 	            	<h5><b><%=rs.getString("b_name") %></b></h5> <!-- 도서명 출력 -->
 	            	<p><%=rs.getString("b_author") %> <!-- 저자명 출력 -->
 	            	<br><%=rs.getString("b_publisher") %> | <%=rs.getString("b_releaseDate") %> <!-- 출판사와 출판일 출력 -->
-	           		<p><%=rs.getString("b_description").substring(0, 60) %>... <!-- 도서 설명 출력 (60자까지) -->
+	           		<p><%=rs.getString("b_description")%>... <!-- 도서 설명 출력 -->
 	            	<p><%=rs.getString("b_unitPrice") %> 원 <!-- 도서 가격 출력 -->
 	            	<p>
 	            	<% if(edit.equals("update")){ %> <!-- edit 파라미터가 'update'일 경우 수정 버튼을 보여줌 -->
-	            	<p><a href="./updateBook.jsp?id=<%=rs.getString("b_id") %>" class="btn btn-success" role = "button"> 수정 &raquo;</a>
+	            	<p><a href="/bookmarket/updateBook.do?id=<%=rs.getString("b_id") %>" class="btn btn-success" role = "button"> 수정 &raquo;</a>
 	            	<% } else if(edit.equals("delete")){ %> <!-- edit 파라미터가 'delete'일 경우 삭제 버튼을 보여줌 -->
 	            	<a href="#" onclick="deleteConfirm('<%=rs.getString("b_id") %>')" class="btn btn-danger" role="button">삭제 &raquo;</a>
 	            	<% } %>

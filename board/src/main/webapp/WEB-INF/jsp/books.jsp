@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*, java.sql.*, org.big.dto.*, org.big.dao.*" %>
-<jsp:useBean id="bookDAO" class="org.big.dao.BookRepository" scope="session"/> <!-- BookRepository 객체를 session 범위로 사용 -->
 
 <!DOCTYPE html>
 <html>
@@ -52,7 +51,13 @@
 	            	<p><%=rs.getString("b_author") %>
 	            	<br><%=rs.getString("b_publisher") %> | <%=rs.getString("b_releaseDate") %>
 	           		<!-- 책 설명의 일부 출력 -->
-	            	<p><%=rs.getString("b_description").substring(0, 60) %>...
+					<%
+                     	String description = rs.getString("b_description");
+                     	if (description.length() > 4) {
+                    		description = description.substring(0, 4) + "...";
+                    	}
+                    %>
+                    <p><%= description %></p>
 	            	<!-- 책 가격 출력 -->
 	            	<p><%=rs.getString("b_unitPrice") %> 원
 	            	<!-- 상세 정보 페이지로 이동하는 링크 -->

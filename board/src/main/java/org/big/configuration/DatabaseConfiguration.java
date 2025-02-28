@@ -1,7 +1,5 @@
 package org.big.configuration;
 
-import java.util.Properties;
-
 import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -60,9 +58,9 @@ public class DatabaseConfiguration {
 	public org.apache.ibatis.session.Configuration mybatisConfig() {
 		return new org.apache.ibatis.session.Configuration();
 	}
-	
+
 	@Bean
-	public PlatformTransactionManager transactionManager() throws Exception{
+	public PlatformTransactionManager transactionManager() throws Exception {
 		return new DataSourceTransactionManager(dataSource());
 	}
 }

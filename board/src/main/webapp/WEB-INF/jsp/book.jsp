@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="java.util.*, java.sql.*, org.big.dto.*, org.big.dao.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ page import="java.sql.*"%>
 <%@ page errorPage="exceptionNoBookId.jsp" %>
 <%@ include file="dbconn.jsp" %> <!-- DB 연결 파일 포함 -->
-<jsp:useBean id="bookDAO" class="org.big.dao.BookRepository" scope="session" /> <!-- DAO 객체를 세션 범위에서 사용 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,8 +55,9 @@
 		<div class="row align-items-md-stretch">
 			<div class="col-md-5">
 				<!-- 도서 이미지를 출력, 파일 이름을 DB에서 가져옴 -->
-				<img alt="image.jpg" src="/images/<%=rs.getString("b_filename") %>" style="width: 70%">
+				<img alt="image.jpg" src="/images/<%=rs.getString("b_fileName") %>" style="width: 70%">
 			</div>
+			
 			<div class="col-md-6">
 				<!-- 도서 정보 출력 -->
 				<h3><b><%=rs.getString("b_name")%></b></h3>

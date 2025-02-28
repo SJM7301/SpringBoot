@@ -25,7 +25,7 @@ public class LoggerAspect {
 		}else if (name.indexOf("Service") > -1) {
 			type = "ServiceImpl \t: ";
 		}else if (name.indexOf("Mapper") > -1) {
-			type = "Mapper \t: ";
+			type = "Mapper \t\t: ";
 		}
 		
 		log.debug(type + name + "." + joinPoint.getSignature().getName() + "()");

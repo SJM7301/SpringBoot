@@ -19,12 +19,12 @@ public class SecurityConfig {
 		http.csrf().disable();
 		return http.build();
 	}
-	
+
 	@Bean
 	public WebSecurityCustomizer webSecurityCustomizer() {
-	     return (web) -> web.ignoring().requestMatchers("/board/*", "api/board/*", "/error", "/error/*", "/img/**", "/favicon.ico");
-	 }
-	
+		return (web) -> web.ignoring().requestMatchers("/board/*", "api/board/*", "/error", "/error/*", "/img/**", "/favicon.ico");
+	}
+
 	@Bean
 	public HttpFirewall defaultHttpFirewall() {
 		return new DefaultHttpFirewall();

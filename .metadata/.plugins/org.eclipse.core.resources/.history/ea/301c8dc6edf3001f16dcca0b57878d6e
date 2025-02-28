@@ -1,0 +1,5 @@
+package org.big.dao;
+
+public class BbsDao {
+	
+}

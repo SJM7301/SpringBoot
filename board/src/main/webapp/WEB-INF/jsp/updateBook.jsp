@@ -35,7 +35,7 @@
 			</div>
 			
 			<div class="col-md-7">
-				<form action="./processUpdateBook.jsp" method="post" enctype="multipart/form-data">
+				<form action="/bookmarket/processUpdateBook.do" method="post" enctype="multipart/form-data">
 				<div class="mb-3 row">
 					<label class="col-sm-2">도서코드</label>
 					<div class="col-sm-5">

@@ -1,2 +1,10 @@
 1740452892468	Move 'board' to 'thymeleaf'
 1740452894562	Move 'error' to 'thymeleaf'
+1740529180009	Move 'lib' to 'jsp'
+1740529256203	Move 'lib' to 'WEB-INF'
+1740529284697	Move 'lib' to 'jsp'
+1740549159743	Move 'list.jsp' to 'jsp'
+1740549161067	Move 'view.jsp' to 'jsp'
+1740549162257	Move 'writeForm.jsp' to 'jsp'
+1740552786132	Move 3 resources to 'board'
+1740619986203	Delete element

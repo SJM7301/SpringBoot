@@ -6,19 +6,16 @@
 <title>Login</title>
 </head>
 <body>
-
 	<div class="container py-4">
-	  <jsp:include page="/bookmarket/menu.do" />
-	
-	 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-	      <div class="container-fluid py-5">
-	        <h1 class="display-5 fw-bold">회원 로그인</h1>
-	        <p class="col-md-8 fs-4">Membership Login</p>      
-	      </div>
-	    </div>
-		
-		
-	
+		<jsp:include page="/bookmarket/menu.do" />
+	 	
+	 	<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+			<div class="container-fluid py-5">
+				<h1 class="display-5 fw-bold">회원 로그인</h1>
+				<p class="col-md-8 fs-4">Membership Login</p>      
+			</div>
+		</div>
+
 		<div class="container" align="center">
 			<div class="col-md-4 col-md-offset-4">
 				<h3 class="form-signin-heading">Please sign in</h3>
@@ -38,18 +35,14 @@
 	    			</div>
 	    			<div class="form-floating  mb-3 row">     
 	     	 			<input type="password" class="form-control" name='password' placeholder="Password">
-	    				 <label for="floatingPassword">Password</label>
-				</div>
-	
-	   
+	    				<label for="floatingPassword">Password</label>
+					</div>
 	  				<button class="btn btn btn-lg btn-success btn-block" type="submit">로그인</button>
-	   				
 	  			</form>
-	
 			</div>
 		</div>
-	
-		<jsp:include page="/bookmarket/footer.do" /> 
+		
+		<jsp:include page="/bookmarket/footer.do" />
 	</div>	
 </body>			
 </html>

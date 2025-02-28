@@ -31,7 +31,7 @@
 				<!-- 언어 선택 링크 -->
 				<a href="?language=ko">Korea</a> | <a href="?language=en">English</a>
 				<!-- 로그아웃 버튼 -->
-				<a href="logout.jsp" class="btn btn-sm btn-success pull right">logout</a>
+				<a href="/bookmarket/logout.do" class="btn btn-sm btn-success pull right">logout</a>
 			</div>
 			<!-- 도서 등록 폼 -->
 			<form name="newBook" action="/bookmarket/processAddBook.do" class="form-horizontal" method="post" enctype="multipart/form-data">
@@ -112,13 +112,13 @@
 				<div class="mb-3 row">
 					<label class="col-sm-2"><fmt:message key="bookImage" /></label>
 					<div class="col-sm-5">
-						<input type="file" name="BookImage" class="form-control">
+						<input type="file" name="bookImage" class="form-control">
 					</div>
 				</div>
 				<!-- 도서 등록 버튼 -->
 				<div class="mb-3 row">
 					<div class="col-sm-offset-2 col-sm-10">
-						<input type="button" class="btn btn-primary" value="<fmt:message key="button" />" onclick="CheckAddBook()">
+						<button class="btn btn-primary" onclick="checkAddBook()">등록</button>
 					</div>
 				</div>
 			</form>

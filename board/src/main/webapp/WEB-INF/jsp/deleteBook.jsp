@@ -34,5 +34,5 @@
         conn.close();
     
     // 삭제 후 editBook.jsp로 리다이렉트
-    response.sendRedirect("editBook.jsp?edit=delete");
+    response.sendRedirect("/bookmarket/editBook.do?edit=delete");
 %>

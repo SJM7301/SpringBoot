@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-		response.sendRedirect("login.jsp?error=1");
+		response.sendRedirect("/bookmarket/login.do?error=1");
 	%>
 </body>
 </html>

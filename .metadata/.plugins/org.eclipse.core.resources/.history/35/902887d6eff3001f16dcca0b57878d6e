@@ -1,5 +1,0 @@
-package org.big.database;
-
-public class DBConnection {
-
-}

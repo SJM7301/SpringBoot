@@ -106,4 +106,14 @@
 		<item value="org.eclipse.wst.xml_ui.feature:3.36.0.v202409282004"/>
 		<item value="org.python.pydev.feature:12.2.0.202409031913"/>
 	</list>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="189"/>
+		<item key="DIALOG_Y_ORIGIN" value="332"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
 </section>

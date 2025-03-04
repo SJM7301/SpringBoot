@@ -1,9 +1,0 @@
-package org.big.controller;
-
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-
-@WebServlet("*.do")
-public class BbsController extends HttpServlet{
-	private static final long serialVersionUID = 1L;
-}
